@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 st.title("INTERNSHIP PROJECT ANALYTICS DASHBOARD - K.INDRANI")
 
 df = pd.read_csv('internship_data.csv')
-df['Start_Start_Start_Start_Date'] = pd.to_Start_Start_Start_Start_Datetime(df['Start_Start_Start_Start_Date'])
+df['Start_Date'] = pd.to_Datetime(df['Start_Date'])
 
 dept = st.sidebar.multiselect(
     "Department Filter Pannu:", 
