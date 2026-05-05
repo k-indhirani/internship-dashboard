@@ -18,7 +18,7 @@ filtered_df = df[df['Department'].isin(dept)]
 
 col1, col2 = st.columns(2)
 with col1:
-    fig1 = px.line(filtered_df, x='Start_Start_Start_Start_Date', y='Hours Spent', title='Hours Trend Over Time')
+    fig1 = px.line(filtered_df, x='Start_Date', y='Hours Spent', title='Hours Trend Over Time')
     st.plotly_chart(fig1, use_container_width=True)
 with col2:
     dept_hours = filtered_df.groupby('Department')['Hours Spent'].sum().reset_index()
